@@ -1,0 +1,30 @@
+spring:
+#  profiles:
+#    active: dev
+  application:
+    name: taskmanagement
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/TASK_MANAGEMENT
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: task.management167@gmail.com
+    password: task@123
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
